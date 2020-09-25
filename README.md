@@ -33,6 +33,14 @@ Go here for the JavaFX tutorial for setup info:
 - Run the program from the Main class
 - You can also just optionally put everything in the Main class, such as init, start(), and stop(), but then you will need the Main class to extend Application
 
+## Episode 3 tutorial notes
 
+### Stages
+
+- 'Stage' is another name for a window
+- You can have multiple windows in a single JavaFX program
+	- make a stage called stage, then make another one called stage2
+	- Stage stage2 = new Stage();
+	- 
 
 
