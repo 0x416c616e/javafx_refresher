@@ -8,9 +8,11 @@ JavaFX was removed from the Oracle API a while ago, so now it's a separate stand
 This project uses Java 15, OpenJFX 15, and IntelliJ on Windows 10.
 
 ## Setup instructions for IntelliJ/OpenJFX/etc.
-
+i
 Go here for the JavaFX tutorial for setup info:
 [https://www.youtube.com/watch?v=BHj6zbH3inI&list=PLfu_Bpi_zcDNYL6171Op3S1ABtuyFV7Nr](https://www.youtube.com/watch?v=BHj6zbH3inI&list=PLfu_Bpi_zcDNYL6171Op3S1ABtuyFV7Nr)
+
+The above is the tutorial series I'm using to re-learn JavaFX and the projects in this repo are based on that.
 
 ## Notes
 
