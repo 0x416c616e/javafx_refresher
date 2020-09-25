@@ -41,6 +41,25 @@ Go here for the JavaFX tutorial for setup info:
 - You can have multiple windows in a single JavaFX program
 	- make a stage called stage, then make another one called stage2
 	- Stage stage2 = new Stage();
-	- 
+	- You can change the window size with stage.setWidth(123) and stage.setHeight(123)
+	- How to change where the location of where the window is opened:
+		- stage.setX(123)
+		- stage.setY(456)
+		
+
+
+
+### Side note
+
+- To make an exe in IntelliJ, follow these instructions:
+	- [https://intellij-support.jetbrains.com/hc/en-us/community/posts/360008885240-How-to-create-an-executable-exe-file-using-Intellij](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360008885240-How-to-create-an-executable-exe-file-using-Intellij)
+- Might also want to look into this:
+	- [https://youtrack.jetbrains.com/issue/IDEA-200721](https://youtrack.jetbrains.com/issue/IDEA-200721)
+- Also look at this:
+	- [https://www.youtube.com/results?search_query=Java+FX+Packager%3A+Can%27t+build+artifact+-+fx%3Adeploy+is+not+available+in+this+JDK](https://www.youtube.com/results?search_query=Java+FX+Packager%3A+Can%27t+build+artifact+-+fx%3Adeploy+is+not+available+in+this+JDK)
+- In IntelliJ, you can export as a JAR using artifacts(?)
+
+
+
 
 

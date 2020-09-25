@@ -14,10 +14,17 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("Hello, world!!!!!!!");
-        stage.show();
+
 
         Stage stage2 = new Stage();
         stage2.setTitle("Second window");
+        stage2.setHeight(123);
+        stage2.setWidth(456);
+
+        stage2.setX(500);
+        stage2.setY(500);
+
+        stage.show();
         stage2.show();
     }
 
