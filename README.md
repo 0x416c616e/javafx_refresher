@@ -45,7 +45,38 @@ Go here for the JavaFX tutorial for setup info:
 	- How to change where the location of where the window is opened:
 		- stage.setX(123)
 		- stage.setY(456)
-		
+- Modality: 
+	- The following means that other windows can't be used until this one is closed:
+		- newWindow.initModality(Modality.APPLICATION_MODAL);
+		- This can be useful for error message windows
+	-Modality.NONE means there are no limitations for how the window can be used when other windows are open
+	-Modality.WINDOW_MODAL means you can't mess with the parent window until the WINDOW_MODAL window is closed, such as if a main window spawns a smaller/sub window
+		-Only works if the WINDOW_MODAL window has an owner:
+			- newWindow.initOwner(stage2);
+	- Modality stuff only matters if you have a multi-window program.
+- Window styles:
+	- Example: stage.initStyle(StateStyle.TRANSPARENT)
+		- Other options:
+			- StageStyle.TRANSPARENT
+				- Invisible window
+			- StageStyle.DECORATED
+				- Normal window
+			- StageStyle.UNDECORATED
+				- Only shows the content of the window, no title bar with minimize/maximize/close buttons
+			- StageStyle.UNIFIED
+			- StageStyle.UTILITY
+				- Simple for a dialogue pop-up or error message
+			- StageStyle.valueOf(String name)
+			- StageStyle.values()
+			- StageStyle.EnumDesc<E>
+	- DECORATED is the default window style
+	- There's more stuff to it but it doesn't matter for a single-window program. The only really important thing is that, if you want to make an error message pop-up, or some sort of notification, just make a new stage called stageError, add the stuff to the stage, and then set the stageError.initModality(Modality.APPLICATION_MODAL), and maybe set stageError.initStyle(StageStyle.UTILITY)
+	- Full screen: stage.setFullScreen(true);
+	- Close a window: stage.close();
+	- Other stuff:
+		- stage.setMaxWidth() and stage.setMinWidth()
+		- stage.setMaxHeight() and stage.setMinHeight()
+
 
 
 
@@ -58,6 +89,9 @@ Go here for the JavaFX tutorial for setup info:
 - Also look at this:
 	- [https://www.youtube.com/results?search_query=Java+FX+Packager%3A+Can%27t+build+artifact+-+fx%3Adeploy+is+not+available+in+this+JDK](https://www.youtube.com/results?search_query=Java+FX+Packager%3A+Can%27t+build+artifact+-+fx%3Adeploy+is+not+available+in+this+JDK)
 - In IntelliJ, you can export as a JAR using artifacts(?)
+- Or I can just create a Docker container or something
+- Don't worry about it too much for now
+
 
 
 

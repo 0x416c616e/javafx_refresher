@@ -1,5 +1,7 @@
 import javafx.application.Application;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -24,8 +26,20 @@ public class Main extends Application {
         stage2.setX(500);
         stage2.setY(500);
 
+        //Modality
+        Stage newWindow = new Stage();
+
+        //all other stages can't be used until an APPLICATION_MODAL stage is closed
+        newWindow.initModality(Modality.APPLICATION_MODAL);
+
+        //this modality mode means you can interact with the window no matter what
+        newWindow.initModality(Modality.NONE);
+        newWindow.initStyle(StageStyle.UNDECORATED);
+
         stage.show();
         stage2.show();
+        newWindow.show();
+
     }
 
 
