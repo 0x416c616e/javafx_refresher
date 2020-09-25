@@ -23,7 +23,10 @@ Go here for the JavaFX tutorial for setup info:
 	- stage is in the JavaFX class you wrote
 	- For a stage to show up, you have to use stage.show();
 	- To run a JavaFX application window, within the Main class, do this:
-		- Application.launch();
+		- Application.launch(JavaFXClassNameGoesHere.class, args);
 	- Make sure you know the difference between creating a new Java class and creating a new JavaFX class -- these are not the same thing in IntelliJ!
+	- Make sure your Main config is edited properly as per the OpenJFX documentation and the Youtube tutorial, and you have the correct JavaFX lib folder set up as an external library, etc.
+
+
 
 
