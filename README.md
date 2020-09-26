@@ -15,6 +15,15 @@ Go here for the JavaFX tutorial for setup info:
 
 The above is the tutorial series I'm using to re-learn JavaFX and the projects in this repo are based on that.
 
+I didn't make this tutorial series, I just learn better when I take notes and code along with it.
+
+Setup info:
+1. Download OpenJFX
+2. Go to File -> Project Structure -> Libraries -> hit the + icon -> Java -> navigate to the OpenJFX folder.
+3. Go to VM options and paste this in (or whatever makes sense for the version of OpenJFX you're using):
+	- --module-path PATH_TO_OPENJFX_LIB_FOLDER_GOES_HERE\openjfx-15_windows-x64_bin-sdk\javafx-sdk-15\lib --add-modules javafx.controls,javafx.fxml
+4. If you aren't using the sample package the IntelliJ automatically creates, then be sure to set the proper Main class by going to Edit Configuration -> Main class
+
 ## Notes
 
 - public void start(Stage stage) throws Exception {} 
