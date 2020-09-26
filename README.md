@@ -124,9 +124,84 @@ The above is the tutorial series I'm using to re-learn JavaFX and the projects i
 		- Many other types of cursors too
 		- Cursor.WAIT is for loading
 
+## Episode 5 notes
 
+### Labels and images
 
+#### Images
 
+Image and ImageView classes
+
+- You can put images in a JavaFX program
+- To display an image in JavaFX, have a stage with a Scene and a VBox, and then do this:
+	- ImageView imageView = new ImageView("google.com/image.jpg");
+	- In the above example, you are getting an image from a remote location, which works. 
+	- Or you can use a local image that you include with the program, which is probably more common and practical for a lot of stuff.
+- You can also use the Image class to put an image in that, and then provide the Image object as an argument to the ImageView object.
+- After you have an image or a string with a location of an image in an ImageView object, add the ImageView object to the VBox or Pane or whatever you're using:
+	- VBox root = new VBox();
+	- Scene scene = new Scene();
+	- Image image = new Image("google.com/example.png");
+	- ImageView imageView = new ImageView(image);
+	- root.getChildren().addAll(imageView)
+	- stage.setScene(scene);
+	- stage.show();
+- To load an image from local storage and using a relative path (this was much more complicated than I thought it would be):
+	- Firstly, import java.io.FileInputStream; and import java.io.IOException;
+	- Then do this:
+		- try {
+			- FileInputStream imageFile = new FileInputStream("example.png");
+			- Image image = new Image(imageFile);
+			- ImageView stuff etc
+		- } catch (IOException e) {
+			- e.printStackTrace();
+		- }
+	- By default, Java will see the project folder. So if you have your Main.java in the project123/src folder, the program won't see itself as being in the src folder. So if you have an image in the project123/ folder, such as project123/example.png, you would just use the relative path of "example.png". no need to go up one level, which is counterintuitive because i thought it would start the current directory at the location of the Main.java, which is in the src folder, but that's not how it works.
+- For ImageView objects, you can use various methods, such as:
+	- imageView.getX()
+	- imageView.getY()
+	- imageView.setX()
+	- imageView.setY()
+	- To change the size of an ImageView object, use these methods:
+		- imageView.setFitHeight(50);
+		- imageView.setFitWidth(100);
+	- and a bunch of other stuff for changing an image and its size and stuff
+
+#### Note about imports
+
+- Make sure you're importing the classes from the correct places! Swing has some classes that have the same names as the JavaFX ones, but if you use Swing, there will be some problems. Swing is an older way of doing Java GUIs.
+
+Examples of some imports:
+ 	- import javafx.application.Application;
+	- import javafx.scene.Scene;
+	- import javafx.scene.control.Label;
+	- import javafx.scene.image.ImageView;
+	- import javafx.scene.image.Image;
+	- import javafx.scene.layout.VBox;
+	- import javafx.stage.Stage;
+
+#### Labels
+
+- Labels are just text that you can show on your JavaFX window
+- How to make a label:
+	- Label label1 = new Label("Test label");
+	- root.getChildren().add(label1);
+	- In the above example, root is a VBox that is in the Scene that is in the Stage
+- You can add an image to a label
+	- Label label1 = new Label("Hello world", imageView);
+	- In the above line of code, the text from the label will be to the right of the image
+	- If the image is small or you used setFitHeight() and setFitWidth() to make the ImageView object smaller, then it will appear like a bullet point to the left of the text
+- If you add multiple labels to a VBox, they appear one after the other. It's a vertical box of nodes/controls.
+- How to change the color of a label:
+	- label1.setTextFill(Color.BLUE);
+	- The above line of code only works if you import javafx.scene.paint.Color;
+	- You can also change the color with hex colors, like so:
+		- label1.setTextFillColor(Color.web("#2fc452"));
+- How to change the font and size of the text in the label:
+	- First, you must import javafx.scene.text.Font;
+	- Then, do this:
+		- label2.setFont(new Font("Arial", 100));
+- There are other things you can do with labels, such as rotating the text.
 
 
 
