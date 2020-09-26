@@ -94,6 +94,38 @@ The above is the tutorial series I'm using to re-learn JavaFX and the projects i
 - Or I can just create a Docker container or something
 - Don't worry about it too much for now
 
+## Episode 4 notes
+
+### Scenes
+
+- Scenes let you add stuff to a stage (window) such as nodes, components, and layouts
+- Scenes go inside stages
+- One scene displayed at a time per stage
+- Scenes are made of nodes/components
+- Be sure to import stuff as needed, such as import javafx.stage.Stage and import javafx.scene.Scene;
+- Scenes need a parent
+	- Example:
+		- VBox parent = new VBox();
+		- Scene scene1 = new Scene(parent);
+		- stage.setScene(scene1);
+- import javafx.application.Application;
+- import javafx.control.Label;
+- import javafx.layout.VBox;
+- Adding a label to a scene: 
+	- Label label1 = new Label("This is my label");
+	- parent.getChildren().add(label1);
+	- Then you need to do stage.show
+- Hierarchies in scenes
+- Stage -> Scene -> Pane -> Nodes
+- You can have multiple nested panes, i.e. an HBox in a VBox or something like that. You can also have multiple nodes within each Pane. But a single window (a Stage) can only have on Scene in it.
+- You can change the mouse cursor, such as:
+	- scene1.setCursor(Cursor.CROSSHAIR);
+		- Many other types of cursors too
+		- Cursor.WAIT is for loading
+
+
+
+
 
 
 
