@@ -28,12 +28,19 @@ Setup info:
 
 Oracle took JavaFX out of the Oracle API in more recent versions of Java. That makes it a little complicated to create a working JAR. 
 
-You will need to export a JAR using a particular artifact configuration, and then create a shell script that will launch it using the JavaFX dependencies. It's a little complicated, but there's a good tutorial that explains it easily. I've tested it in Java 11/OpenJFX 11.
+You will need to export a JAR using a particular artifact configuration, and then create a shell script that will launch it using the JavaFX dependencies. It's a little complicated, but there's a good tutorial that explains it easily. I've tested it in Java 11/OpenJFX 11 and Java 15 with OpenJFX 15.
 
 Watch this tutorial: [https://www.youtube.com/watch?v=HGHu-SzL-5E](https://www.youtube.com/watch?v=HGHu-SzL-5E)
 https://www.youtube.com/watch?v=HGHu-SzL-5E
 
+I made a Java15/JavaFX15 JAR launcher template here:
+- [https://github.com/0x416c616e/java15_javafx15_jar_template](https://github.com/0x416c616e/java15_javafx15_jar_template)
+The above template repo makes it easy to create a *modern* JavaFX program program that can be run by double clicking something. In the above case, you have to double click run.vbs. 
 
+
+## C++ EXE for launching a JAR
+
+I haven't done this yet, but later I am planning on writing a C++ program that does nothing more than launch the JAR with the proper args. This will replace the current vbs-to-bat-to-JAR system I currently have going.
 
 ## Notes about JavaFX coding
 
@@ -253,6 +260,12 @@ Examples of some imports:
 - Aside from using an external stylesheet, you can also do this to style a node:
 	- Hyperlink link = new Hyperlink("example");
 	- link.setStyle("-fx-background-color: purple");
+
+## Episode 8
+
+- 
+
+
 
 
 
