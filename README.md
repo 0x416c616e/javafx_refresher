@@ -33,6 +33,10 @@ You will need to export a JAR using a particular artifact configuration, and the
 Watch this tutorial: [https://www.youtube.com/watch?v=HGHu-SzL-5E](https://www.youtube.com/watch?v=HGHu-SzL-5E)
 https://www.youtube.com/watch?v=HGHu-SzL-5E
 
+
+
+## Notes about JavaFX coding
+
 - public void start(Stage stage) throws Exception {} 
 	- When the application starts, this stage is created.
 	- A stage is a window in JavaFX/OpenJFX
