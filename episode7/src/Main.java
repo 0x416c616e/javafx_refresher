@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -15,7 +16,12 @@ public class Main extends Application {
         stage.setWidth(500);
         stage.setHeight(500);
         VBox root = new VBox();
+        Label label1 = new Label("Here is my label");
+        label1.setId("idTest");
+        Label anotherLabel = new Label("Another one");
+        root.getChildren().addAll(label1, anotherLabel);
         Scene scene = new Scene(root);
+        scene.getStylesheets().add("css/style.css");
         stage.setScene(scene);
         stage.show();
 
@@ -28,6 +34,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         System.out.println("hi");
-        launch();
+        launch(args);
     }
 }

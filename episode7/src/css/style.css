@@ -1,0 +1,13 @@
+.root {
+    -fx-background-color: lightblue;
+    -fx-font-family: 'Impact';    
+    -fx-font-size: 25px;
+}
+
+.label {
+    -fx-background-color: crimson;
+}
+#idTest {
+    -fx-font-size: 50px;
+    -fx-background-color: green;
+}

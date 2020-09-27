@@ -24,7 +24,14 @@ Setup info:
 	- --module-path PATH_TO_OPENJFX_LIB_FOLDER_GOES_HERE\openjfx-15_windows-x64_bin-sdk\javafx-sdk-15\lib --add-modules javafx.controls,javafx.fxml
 4. If you aren't using the sample package the IntelliJ automatically creates, then be sure to set the proper Main class by going to Edit Configuration -> Main class
 
-## Notes
+## JavaFX to JAR!!!
+
+Oracle took JavaFX out of the Oracle API in more recent versions of Java. That makes it a little complicated to create a working JAR. 
+
+You will need to export a JAR using a particular artifact configuration, and then create a shell script that will launch it using the JavaFX dependencies. It's a little complicated, but there's a good tutorial that explains it easily. I've tested it in Java 11/OpenJFX 11.
+
+Watch this tutorial: [https://www.youtube.com/watch?v=HGHu-SzL-5E](https://www.youtube.com/watch?v=HGHu-SzL-5E)
+https://www.youtube.com/watch?v=HGHu-SzL-5E
 
 - public void start(Stage stage) throws Exception {} 
 	- When the application starts, this stage is created.
@@ -233,7 +240,25 @@ Examples of some imports:
 	- });
 - EventHandlers and lambda expressions can achieve pretty much the same thing, at least in this context
 
+## Episode 7: CSS
 
+- CSS might be associated with front-end web development, but you can even use it in JavaFX for your Java program's GUI.
+- CSS in JavaFX is different from web dev CSS.
+	- Go here to read the documentation about JavaFX CSS:
+	- [https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html](https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html)
+	- JavaFX CSS starts with -fx-
+	- -fx-background-color: instead of background-color
+- How to add a stylesheet to a JavaFX program:
+	- scene.getStylesheets().add("css/style.css");
+- If you have a VBox, here is how you create a JavaFX CSS selector for it:
+	- .root {}
+	- The VBox can be named anything but you address the root pane as root
+	- if you want to target labels, use this:
+		- .label {}
+- To change the CSS ID of a label (or any kind of node), use this:
+	- label1.setId("idTest");
+	- Then in your CSS file, do this:
+	- #idTest {}
 
 
 

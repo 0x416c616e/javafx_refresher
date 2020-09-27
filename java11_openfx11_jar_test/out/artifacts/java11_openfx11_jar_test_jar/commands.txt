@@ -1,0 +1,7 @@
+This tutorial is super important for JARs:
+
+[https://www.youtube.com/watch?v=HGHu-SzL-5E](https://www.youtube.com/watch?v=HGHu-SzL-5E)
+
+And this command is also important (but use your own path):
+
+java --module-path "C:\PATH_TO_LIB_FOLDER\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.web -jar java11_openfx11_jar_test.jar

@@ -12,8 +12,9 @@
       </options>
     </properties>
     <root id="root">
-      <element id="module-output" name="episode7" />
-      <element id="library" level="project" name="lib" />
+      <element id="archive" name="episode7.jar">
+        <element id="module-output" name="episode7" />
+      </element>
     </root>
   </artifact>
 </component>
