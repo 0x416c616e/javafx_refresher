@@ -211,6 +211,31 @@ Examples of some imports:
 	- Then, do this:
 		- label2.setFont(new Font("Arial", 100));
 - There are other things you can do with labels, such as rotating the text.
+- How to change the text in a label:
+	- label.setText("here is the new text");
+
+## Episode 6: Hyperlinks
+
+- How to create a hyperlink in JavaFX:
+	- Hyperlink link = new Hyperlink("example link");
+- How to use a lambda expression to make a link do something when it's clicked:
+	- link.setOnAction(e -> {
+		- System.out.println("link has been clicked");
+	- });
+- Then you need to add the hyperlink to your VBox/Pane/whatever:
+	- root.getChildren().add(link);
+- Instead of a lambda expression, you can use an EventHandler:
+	- link.setOnAction(new EventHandler<ActionEvent>() {
+		- @Override
+		- public void handle(ActionEvent actionEvent) {
+			- System.out.println("using an event handler instead of a lambda");
+		- }
+	- });
+- EventHandlers and lambda expressions can achieve pretty much the same thing, at least in this context
+
+
+
+
 
 
 
