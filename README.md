@@ -328,6 +328,10 @@ Examples of some imports:
 	- });
 
 
+## Notes about the 10th tutorial: toggle and radio buttons
+
+- 
+
 
 
 
