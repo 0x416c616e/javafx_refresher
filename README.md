@@ -102,19 +102,6 @@ https://www.youtube.com/watch?v=HGHu-SzL-5E
 
 
 
-
-### Side note
-
-- To make an exe in IntelliJ, follow these instructions:
-	- [https://intellij-support.jetbrains.com/hc/en-us/community/posts/360008885240-How-to-create-an-executable-exe-file-using-Intellij](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360008885240-How-to-create-an-executable-exe-file-using-Intellij)
-- Might also want to look into this:
-	- [https://youtrack.jetbrains.com/issue/IDEA-200721](https://youtrack.jetbrains.com/issue/IDEA-200721)
-- Also look at this:
-	- [https://www.youtube.com/results?search_query=Java+FX+Packager%3A+Can%27t+build+artifact+-+fx%3Adeploy+is+not+available+in+this+JDK](https://www.youtube.com/results?search_query=Java+FX+Packager%3A+Can%27t+build+artifact+-+fx%3Adeploy+is+not+available+in+this+JDK)
-- In IntelliJ, you can export as a JAR using artifacts(?)
-- Or I can just create a Docker container or something
-- Don't worry about it too much for now
-
 ## Episode 4 notes
 
 ### Scenes
@@ -263,7 +250,9 @@ Examples of some imports:
 	- label1.setId("idTest");
 	- Then in your CSS file, do this:
 	- #idTest {}
-
+- Aside from using an external stylesheet, you can also do this to style a node:
+	- Hyperlink link = new Hyperlink("example");
+	- link.setStyle("-fx-background-color: purple");
 
 
 
