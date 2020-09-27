@@ -297,6 +297,35 @@ Examples of some imports:
 
 ## Episode 9 notes: menu buttons
 
+- Drop-down menus
+- import javafx.scene.control.MenuItem;
+- MenuButtons with multiple MenuItems each
+- import javafx.scene.control.MenuButton;
+- import javafx.scene.control.MenuItem;
+- Example:
+	- MenuItem item1 = new MenuItem("Option 1");
+	- MenuItem item2 = new MenuItem("Option 2");
+	- MenuItem item3 = new MenuItem("Option 3");
+	- MenuItem item4 = new MenuItem("Option 4");
+	- MenuButton menuButton = new MenuButton("Menu", null, item1, item2, item3, item4);
+	- root.getChildren().add(menuButton);
+- If you want it to appear more like the File Edit View etc menus at the top of typical desktop applications, use this instead:
+	- MenuItem item1 = new MenuItem("Select All");
+	- MenuItem item2 = new MenuItem("Select None");
+	- MenuItem item3 = new MenuItem("Copy");
+	- MenuItem item4 = new MenuItem("Paste");
+	- MenuItem item5 = new MenuItem("Cut");
+	- MenuItem item6 = new MenuItem("Undo");
+	- MenuItem item7 = new MenuItem("Redo");
+	- Menu editMenu = new Menu("Edit", null, item1, item2, item3, item4, item5, item6, item7);
+	- MenuBar menuBar = new MenuBar(editMenu);
+	- root.getChildren().add(menuBar);
+- The above example shows menu items being put into a menu, and the menu being put into a menu bar. That's the top bar at a window, seen in many kinds of applications. - You can set lambda expressions for menu items:
+	- Label message = new Label("Nothing clicked yet");
+	- root.getChildren().add(message);
+	- item1.setOnAction( e -> {
+		- message.setText("Select All was clicked");
+	- });
 
 
 
