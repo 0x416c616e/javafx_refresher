@@ -261,9 +261,41 @@ Examples of some imports:
 	- Hyperlink link = new Hyperlink("example");
 	- link.setStyle("-fx-background-color: purple");
 
-## Episode 8
+## Episode 8: Buttons and Mnemonics
 
-- 
+### Buttons
+
+- You can add buttons to your program
+	- import javafx.scene.control.Button;
+	- Then, within your start() method:
+	- Button button = new Button("Click");
+	- Then add to the VBox/Pane/whatever
+- You can change the style of a button:
+	- button.setStyle("-fx-font-size: 60px");
+- You can change the text of a button:
+	- button.setText("this is the new text");
+- Text wrapping if you don't want the button text to get cut off if the window is too narrow:
+	- button.setWrapText(true);
+- Button sizing:
+	- button.setMinSize(50, 50);
+	- button.setPrefSize(100, 100);
+	- button.setMaxSize(200, 200);
+- Unrelated to buttons, but still useful to know:
+	- You can change the icon of a JavaFX program with the following line of code:
+		- stage.getIcons().add(new Image("file:test_icon.png"));
+		- You will also need to import javafx.scene.image.Image;
+
+### Mnemonics
+
+- Mnemonics = shortcut buttons
+- Let's say there's a program with a File menu. Sometimes you can hit alt+F to use the File menu. 
+- button1.setMnemonicParsing(true);
+- In order for the mnemonic parsing to work properly, you also need to add an underscore in the front of the label on the button, such as button.setLabel("\_text");
+- Then you will be able to hit alt to activate the mnemonic shortcut
+- Hit alt to activate mnemonics, then the letter after the underscore, then hit alt to deactivate the mnemonics again
+
+
+## Episode 9 notes: menu buttons
 
 
 
